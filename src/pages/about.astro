@@ -1,0 +1,35 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Random from "../components/Random";
+---
+
+<Layout title="About this demo">
+    <main>
+        <h1>About this demo</h1>
+
+        <section class="flex justify-around">
+            <Random/>
+            <Random client:load />
+        </section>
+
+    </main>
+</Layout>
+
+<style>
+    main {
+        margin: auto;
+        padding: 1rem;
+        max-width: 1200px;
+        color: white;
+        font-size: 20px;
+        line-height: 1.6;
+    }
+
+    h1 {
+        font-size: 4rem;
+        font-weight: 700;
+        line-height: 1;
+        text-align: center;
+        margin-bottom: 1em;
+    }
+</style>
