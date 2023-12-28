@@ -3,6 +3,9 @@ import Layout from '../layouts/Layout.astro';
 import {getPage} from "../lib/contentful";
 import {documentToHtmlString} from "@contentful/rich-text-html-renderer";
 
+export const prerender = true;
+
+
 const page = await getPage('7zRCFTUjzvri3ayMMXRhlE')
 
 const [title, titleLastWord] = page.fields.title.split(/(\s[^\s]+)$/)
